@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/smallmeal"
+    tools:context="com.example.android.tipcalculation.MainActivity"
+    android:id="@+id/col">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/title"
+        android:layout_height="wrap_content"
+        android:text="Hello customer!"
+        android:textSize="20sp"
+        android:textColor="#000FF0"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/LBill"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title">
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/BillAmount"
+        android:text="bill amount "
+
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:id="@+id/B"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="BA"
+        android:imeActionLabel="Over and  out!"
+        android:imeOptions="actionDone"
+        android:textColor="#00FFF0"
+   />
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Total: "
+            android:layout_below="@id/tip"
+            android:layout_toRightOf="@id/party"
+            />
+        <EditText
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tot"
+            android:ems="10"
+            android:layout_below="@+id/title"
+            android:layout_toRightOf="@id/total"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LBill"
+        android:id="@+id/Lparty">
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/parties"
+        android:text="Party"
+        android:textSize="20sp"
+
+        />
+
+    <EditText
+        android:id="@+id/party"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="#Party "
+        android:imeOptions="actionDone"
+        android:textColor="#00FFF0"
+   />
+        <TextView
+            android:id="@+id/tipp"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LBill"
+            android:layout_toRightOf="@id/party"
+            android:text="Tip amount:"
+            />
+
+        <EditText
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/T"
+            android:ems="10"
+            android:layout_below="@+id/checkbox"
+            android:layout_toRightOf="@+id/tip"
+            />
+    </LinearLayout>
+    <SeekBar
+        android:id="@+id/Seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Lparty"/>
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Seekbar"
+        android:gravity="center"
+        android:text="Split bill ?"
+    />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkout"
+        android:text="CheckthisOut"
+        android:textColor="#D12A1D"
+        android:layout_below="@id/checkbox"
+        android:layout_centerHorizontal="true"
+        android:onClick="calculat"
+   />
+
+
+</RelativeLayout>
